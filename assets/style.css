@@ -1,0 +1,89 @@
+@import url('https://fonts.googleapis.com/css2?family=Alfa+Slab+One&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Bungee Spice", sans-serif;
+    font-weight: 100;
+    overflow-y: hidden ;
+}
+
+  
+body {
+    background: linear-gradient(90deg,rgba(0, 0, 0, 1) 0%, rgba(0, 41, 66, 1) 20%, rgba(0, 89, 54, 1) 79%, rgba(0, 0, 0, 1) 100%);
+}
+
+
+
+.nav-img {
+    display: flex;
+    justify-content: space-between;
+    margin: 20px;
+}
+
+
+
+
+main {
+    display:  flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    
+}
+
+.container {
+    background-color: rgba(7, 92, 66, 0.137);  
+    padding: 100px;
+    border-radius: 20px;
+    
+}
+
+h1{ 
+    margin: 10px;
+    padding: 15px;
+    font-size: 50px;
+}
+
+#apelido {
+    display: flex;
+    margin: 10px;
+    margin-left: 80px;
+    padding: 15px;
+    border-radius: 10px;
+    border-style: none;
+
+}
+
+
+button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-left: 35%;
+    padding: 15px;
+    width: 100px;
+    border-radius: 10px;
+    border-style: none;
+}
+
+button > a {
+    text-decoration: none;
+    color: black;
+}
+
+.cadastro {
+    display: flex;
+    text-align: center;
+    justify-content: center;
+    margin: 10px;
+    text-decoration: none;
+    color: black;
+}
+
+
+
+
+
+
