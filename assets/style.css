@@ -10,9 +10,9 @@
 }
 
   
-body {
+/*body {
     background: linear-gradient(90deg,rgba(0, 0, 0, 1) 0%, rgba(0, 41, 66, 1) 20%, rgba(0, 89, 54, 1) 79%, rgba(0, 0, 0, 1) 100%);
-}
+*/
 
 
 
@@ -23,7 +23,7 @@ body {
 }
 
 
-
+/*
 
 main {
     display:  flex;
@@ -34,6 +34,8 @@ main {
 }
 
 .container {
+    
+    flex-direction: row;
     background-color: rgba(7, 92, 66, 0.137);  
     padding: 100px;
     border-radius: 20px;
@@ -45,6 +47,8 @@ h1{
     padding: 15px;
     font-size: 50px;
 }
+
+
 
 #apelido {
     display: flex;
@@ -80,10 +84,92 @@ button > a {
     margin: 10px;
     text-decoration: none;
     color: black;
+
+
+
+
+
+
+
+*/
+
+
+main {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    
+}
+
+.container {
+   
+    width: 500px;
+    height: 400px;
+    border-radius: 15px;
+    background-color: antiquewhite;
 }
 
 
+.container > h1 {
+    margin-top: 50px;
+    margin-bottom: 60px;
+    font-size: 50px;
+    text-align: center;
 
+}
 
+/*.container > input {
 
+    margin: 15px;
+    width: 200px;
+    height: 50px;
+    padding: 15px;  
+    border-radius: 10px;
+    border-style: none;
+}*/
+
+.input-text {
+    display: flex;
+    justify-content: center;
+    
+}
+
+.input-text > input {
+    margin: 15px;
+    padding: 10px;
+    height: 70px;
+    border-radius: 10px;
+    border-style: none;
+    font-size: 18px;
+    
+}
+
+.button {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+}
+
+button {
+   
+    margin-top: 40px;
+    margin-right: 30px;
+    border-radius: 10px;
+    border-style: none;
+    width: 140px;
+    height: 55px;
+}
+button:hover {
+    background-color: #00000023;
+}
+
+button > a{ 
+    display: flex;
+    text-decoration: none;
+    text-align: center;
+    justify-content: center;
+    color: #000;
+}
 
