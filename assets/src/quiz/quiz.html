@@ -11,10 +11,21 @@
       <nav class="menu">
         <div class="div-menu">
           <ul>
-            <div class="esquerda"><li>Bonus</li></div>
+            <div class="bonus"><li>Bonus</li></div>
             <div class="direita">
-              <li><img width="25px" src="/icon/gear-fill.svg" alt="gear.svg"></li>
-              <li><img width="20px" src="/icon/arrows-fullscreen.svg" alt="arrows.svg"></li>
+              <div class="config-icon" onclick="toggleConfigMenu()">
+                <img class="rotating-image" src="/icon/gear-fill.svg
+                " alt="gear.svg" width="25px"  />
+            </div>
+        
+            <div class="config-box" id="configBox">
+                <h3>Configurações</h3>
+                
+                <button onclick="toggleConfigMenu()">Fechar</button>
+            </div>
+              
+              <!-- <li class="engrenagem"><img width="25px" src="/icon/gear-fill.svg" alt="gear.svg" ></li> -->
+              <li><img  class="fullscreen" width="20px" src="/icon/arrows-fullscreen.svg" alt="arrows.svg"></li>
               <!--Pode ser um botao para deixar em fullscreen "f11"-->
             </div>
           </ul>
@@ -22,7 +33,10 @@
       </nav>
 
       <main>
+        
         <div class="perguntas">
+          
+       
           <p>
             Lorem ipsum dolor sit, amet consectetur adipisicing elit. Illo
             voluptatibus nihil doloribus beatae fugiat dolores vitae, incidunt
@@ -56,6 +70,8 @@
       <!--Colocar uns boost por acerto ou habilidades do lado do nome.-->
     </footer>
   </body>
+
+  <script src="QuizConfig.js"></script>
 </html>
 
 <!--Pode ser adicionado um contador de tempo...assim que a partida for inicida-->
