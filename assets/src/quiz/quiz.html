@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-br">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -7,58 +7,59 @@
     <link rel="stylesheet" href="quiz.css" />
   </head>
   <body>
-    
-      <nav class="menu">
-        <div class="div-menu">
-          <ul>
-            <div class="bonus"><li>Bonus</li></div>
-            <div class="direita">
-              <div class="config-icon" onclick="toggleConfigMenu()">
-                <img class="rotating-image" src="/icon/gear-fill.svg
-                " alt="gear.svg" width="25px"  />
+    <nav class="menu">
+      <div class="div-menu">
+        <ul>
+          <div class="bonus"><li>Bonus</li></div>
+          <div class="direita">
+            <div class="config-icon" onclick="toggleConfigMenu()">
+              <img
+                class="rotating-image"
+                src="/icon/gear-fill.svg
+                "
+                alt="gear.svg"
+                width="25px"
+              />
             </div>
-        
+
             <div class="config-box" id="configBox">
-                <h1>Configurações</h1>
-                
-                <button onclick="toggleConfigMenu()">Fechar</button>
-            </div>
-              
-              <!-- <li class="engrenagem"><img width="25px" src="/icon/gear-fill.svg" alt="gear.svg" ></li> -->
-              <img  class="fullscreen" width="20px" src="/icon/arrows-fullscreen.svg" alt="arrows.svg">
-              <!--Pode ser um botao para deixar em fullscreen "f11"-->
-            </div>
-          </ul>
-        </div>
-      </nav>
+              <h1>Configurações</h1>
 
-      <main>
-        
-        <div class="perguntas">
-          
-       
-          <p>
-            Lorem ipsum dolor sit, amet consectetur adipisicing elit. Illo
-            voluptatibus nihil doloribus beatae fugiat dolores vitae, incidunt
-            nulla? Consequatur animi repellendus cupiditate tempore voluptatibus
-            voluptatum earum delectus omnis ducimus minus.
-          </p>
-        </div>
-        <!-- As perguntas podem ser puxadas de um servidor API,junto com as responstas.-->
+              <button onclick="toggleConfigMenu()">Fechar</button>
+            </div>
 
-        <div class="respostas">
-          <!-- 4 botoes interativos, provavelmente tera um numero encima do botao, quando a pessoa aperta o botao vai selecionar a resposta: ex:> <button> China </button> dentro do campo do botao tera um numero -->
-          <button>
-            Lorem ipsum dolor sit amet consectetur, adipisicing elit.
-          </button>
-          <button>Obcaecati, quam. Ducimus laudantium minima, fuga.</button>
-          <button>
-            Lorem ipsum dolor sit amet consectetur, adipisicing elit.
-          </button>
-          <button>Obcaecati, quam. Ducimus laudantium minima, fuga.</button>
-        </div>
-      </main>
-    
+            <!-- <li class="engrenagem"><img width="25px" src="/icon/gear-fill.svg" alt="gear.svg" ></li> -->
+            <img
+              class="fullscreen"
+              width="20px"
+              src="/icon/arrows-fullscreen.svg"
+              alt="arrows.svg"
+            />
+            <!--Pode ser um botao para deixar em fullscreen "f11"-->
+          </div>
+        </ul>
+      </div>
+    </nav>
+
+    <main>
+      <div class="perguntas" id="quest">
+        <p>
+          Lorem ipsum dolor sit, amet consectetur adipisicing elit. Illo
+          voluptatibus nihil doloribus beatae fugiat dolores vitae, incidunt
+          nulla? Consequatur animi repellendus cupiditate tempore voluptatibus
+          voluptatum earum delectus omnis ducimus minus.
+        </p>
+      </div>
+      <!-- As perguntas podem ser puxadas de um servidor API,junto com as responstas.-->
+
+      <div class="respostas">
+        <!-- 4 botoes interativos, provavelmente tera um numero encima do botao, quando a pessoa aperta o botao vai selecionar a resposta: ex:> <button> China </button> dentro do campo do botao tera um numero -->
+        <button id="a"></button>
+        <button id="b"></button>
+        <button id="c"></button>
+        <button id="d"></button>
+      </div>
+    </main>
 
     <footer>
       <div class="Nome">
@@ -72,6 +73,7 @@
   </body>
 
   <script src="QuizConfig.js"></script>
+  <script src="quest.js"></script>
 </html>
 
 <!--Pode ser adicionado um contador de tempo...assim que a partida for inicida-->
