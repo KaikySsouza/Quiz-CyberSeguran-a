@@ -3,17 +3,14 @@
     padding: 0;
     box-sizing: border-box;
     overflow-y: hidden;
+    font-family: 'Share Tech Mono', monospace;
 }
 
 
 body{ 
-    background-color: rgba(12, 43, 218, 0.315);
+    background-color: #0D1117;
 }
 
-main{
-    background-color: black;
-  ;
-}
 
 
 ul {
@@ -21,16 +18,30 @@ ul {
     justify-content: space-between;
     align-items: center;
 }
+
+.menu {
+    background-color: #1f71eba6;
+}
+
+
 .bonus
     {
-        display: flex;
-        gap: 10px; 
-        margin-left: 20px;
+        display: flex; 
         border: rgba(0, 0, 0, 0.801) 2px solid;
         border-radius: 15px;
         height: 45px;
         width: 75px;
-        margin: 5px
+        margin: 6px
+    }
+
+    .bonus > li {
+        font-size: 17px;
+    }
+
+    .bonus:hover {
+        background-color: rgba(0, 0, 0, 0.589);
+        color: white;
+        transition: 0.3s;
     }
 
 .direita {
@@ -41,7 +52,7 @@ ul {
 .config-icon {
     position: fixed;
     top: 15px;
-    right: 100px;
+    right: 70px;
     font-size: 24px;
     cursor: pointer;
 }
@@ -71,6 +82,7 @@ ul {
     transition: transform 0.5s ease, opacity 0.5s ease; 
     cursor: pointer; 
     margin: 15px;
+    ;
    
 }
 
@@ -117,6 +129,7 @@ main {
 
 .perguntas{
   border: rgba(0, 0, 0, 0.589) 2px solid;
+  color: #C9D1D9;
   border-radius: 15px;
   display: flex;
   text-align: justify;
@@ -136,18 +149,33 @@ main {
 
 .respostas > button {
     overflow: hidden;
+    background-color: #1F6FEB;
     padding: 110px;
     margin: 10px;
     border-radius: 15px;
     border-style: none;
+    border-color:#30363D;
     box-shadow: 1px 2px 5px 1px;
     cursor: pointer;
 }
 
 .respostas > button:hover {
-    background-color: rgba(0, 0, 0, 0.589);
+    background-color: 	#2E8BFF;
     color: white;
     transition: 0.3s;
+}
+
+footer {
+    display: flex;
+    align-items: center;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: 50px;
+    background-color: rgba(12, 34, 158, 0.603);
+    color: white;
+    font-size: 20px;
 }
 
 

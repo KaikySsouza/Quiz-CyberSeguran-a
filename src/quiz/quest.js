@@ -48,10 +48,10 @@ function checkAnswer(optionIndex) {
   
     
     if (quest[currentQuestionIndex].options[optionIndex].isCorrect) {
-      buttons[optionIndex].style.backgroundColor = "green"; 
+      buttons[optionIndex].style.backgroundColor = "#2ECC71"; 
       alert("Você acertou!");
     } else {
-      buttons[optionIndex].style.backgroundColor = "red"; 
+      buttons[optionIndex].style.backgroundColor = "#FF4C4C"; 
       alert("Você errou!");
     }
   
