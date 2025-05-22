@@ -1,71 +1,50 @@
-const quest = [
-  {
-    question: "Qual dessas opções é a mais segura para criar uma senha forte?",
-    options: [
-      {text: "usar o nome do seu pet e sua data de nascimento",isCorrect: false, },
-      { text: "12345678", isCorrect: false }, 
-      {text: "uma sequência aleatória com letras maiúsculas, minúsculas, números e símbolos", isCorrect: true,},
-      { text: "senha123", isCorrect: false },
-    ],
-  },
-  {
-    question: "Qual dessas opções é um exemplo de antivírus?",
+import getQuestion from "./API/questapi.js";
 
-    options: [
-      { text: "Google Chrome", isCorrect: false },
-      { text: "Windows Defender", isCorrect: true },
-      { text: "WhatsApp", isCorrect: false },
-      { text: "Photoshop", isCorrect: false },
-    ],
-  },
-];
+let perguntas = [];
+let currentIndex = 0;
 
-let currentQuestionIndex = 0;
-
-function loadQuestion(index) {
-  const question = quest[index];
-  document.getElementById("quest").innerHTML = question.question;
-  document.getElementById("a").innerHTML = question.options[0].text;
-  document.getElementById("b").innerHTML = question.options[1].text;
-  document.getElementById("c").innerHTML = question.options[2].text;
-  document.getElementById("d").innerHTML = question.options[3].text;
+async function carregarPerguntas() {
+  perguntas = await getQuestion();
+  mostrarPergunta();
 }
 
-loadQuestion(currentQuestionIndex);
+function mostrarPergunta() {
+  const p = perguntas[currentIndex];
+  document.getElementById("quest").innerHTML = p.pergunta;
+  document.getElementById("a").innerHTML = p.respostas[0].texto;
+  document.getElementById("b").innerHTML = p.respostas[1].texto;
+  document.getElementById("c").innerHTML = p.respostas[2].texto;
+  document.getElementById("d").innerHTML = p.respostas[3].texto;
+}
 
-document.getElementById("a").addEventListener("click", () => checkAnswer(0));
-document.getElementById("b").addEventListener("click", () => checkAnswer(1));
-document.getElementById("c").addEventListener("click", () => checkAnswer(2));
-document.getElementById("d").addEventListener("click", () => checkAnswer(3));
-
-function checkAnswer(optionIndex) {
-    const buttons = [
-      document.getElementById("a"),
-      document.getElementById("b"),
-      document.getElementById("c"),
-      document.getElementById("d"),
-    ];
-  
-    
-    if (quest[currentQuestionIndex].options[optionIndex].isCorrect) {
-      buttons[optionIndex].style.backgroundColor = "#2ECC71"; 
-      alert("Você acertou!");
-    } else {
-      buttons[optionIndex].style.backgroundColor = "#FF4C4C"; 
-      alert("Você errou!");
-    }
-  
-   
-    setTimeout(() => {
-      
-      buttons.forEach((button) => (button.style.backgroundColor = ""));
-  
-    
-      currentQuestionIndex++;
-      if (currentQuestionIndex < quest.length) {
-        loadQuestion(currentQuestionIndex);
-      } else {
-        alert("Quiz finalizado!");
-      }
-    }, 1000);
+function checarResposta(indice, event) {
+  const correta = perguntas[currentIndex].respostas[indice].correta;
+  if (correta) {
+    alert("Correta!");
+    event.target.style.backgroundColor = "green";
+    currentIndex++;
+  } else {
+    alert("Incorreta!");
+    event.target.style.backgroundColor = "red";
   }
+
+  setTimeout(() => {
+    if (currentIndex < perguntas.length) {
+      mostrarPergunta();
+  
+      document.getElementById("a").style.backgroundColor = "";
+      document.getElementById("b").style.backgroundColor = "";
+      document.getElementById("c").style.backgroundColor = "";
+      document.getElementById("d").style.backgroundColor = "";
+    } else {
+      alert("Fim do quiz!");
+    }
+  }, 1000);
+}
+
+document.getElementById("a").addEventListener("click", (event) => checarResposta(0, event));
+document.getElementById("b").addEventListener("click", (event) => checarResposta(1, event));
+document.getElementById("c").addEventListener("click", (event) => checarResposta(2, event));
+document.getElementById("d").addEventListener("click", (event) => checarResposta(3, event));
+
+carregarPerguntas();
