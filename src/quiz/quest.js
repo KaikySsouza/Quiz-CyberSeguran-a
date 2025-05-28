@@ -17,21 +17,28 @@ function mostrarPergunta() {
   document.getElementById("d").innerHTML = p.respostas[3].texto;
 }
 
-function checarResposta(indice, event) {
+let resultado = [];
+export function checarResposta(indice, event) {
   const correta = perguntas[currentIndex].respostas[indice].correta;
   if (correta) {
-    alert("Correta!");
+    const valor = 10; // Valor da pontuação por resposta correta
+    for (let i = 0; i < correta; i++) {
+      resultado.push(valor);
+      console.log("Pontuação parcial:", resultado);
+    }
+
     event.target.style.backgroundColor = "green";
     currentIndex++;
   } else {
     alert("Incorreta!");
     event.target.style.backgroundColor = "red";
+    currentIndex++;
   }
 
   setTimeout(() => {
     if (currentIndex < perguntas.length) {
       mostrarPergunta();
-  
+
       document.getElementById("a").style.backgroundColor = "";
       document.getElementById("b").style.backgroundColor = "";
       document.getElementById("c").style.backgroundColor = "";
@@ -42,9 +49,17 @@ function checarResposta(indice, event) {
   }, 1000);
 }
 
-document.getElementById("a").addEventListener("click", (event) => checarResposta(0, event));
-document.getElementById("b").addEventListener("click", (event) => checarResposta(1, event));
-document.getElementById("c").addEventListener("click", (event) => checarResposta(2, event));
-document.getElementById("d").addEventListener("click", (event) => checarResposta(3, event));
+document
+  .getElementById("a")
+  .addEventListener("click", (event) => checarResposta(0, event));
+document
+  .getElementById("b")
+  .addEventListener("click", (event) => checarResposta(1, event));
+document
+  .getElementById("c")
+  .addEventListener("click", (event) => checarResposta(2, event));
+document
+  .getElementById("d")
+  .addEventListener("click", (event) => checarResposta(3, event));
 
 carregarPerguntas();
