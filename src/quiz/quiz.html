@@ -4,7 +4,11 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Security Quiz</title>
+    
     <link rel="stylesheet" href="quiz.css" />
+    <link rel="stylesheet" href="TelaDeCarregamento/loading.css">
+    <link rel="stylesheet" href="Nota/nota.css" />
+
   </head>
   <body>
     <nav class="menu">
@@ -40,8 +44,47 @@
         </ul>
       </div>
     </nav>
-
     <main>
+
+
+      <div id="loader">
+        <div class="spinner"></div>
+        <p>Carregando...</p>
+      </div>
+
+      <!-- Modal da nota -->
+      <div id="nota" class="modal">
+        <div class="modal-content">
+          <h2>🔒 Bem-vindo ao Quiz de Cibersegurança!</h2>
+          <p>📌 Informações importantes:</p>
+          <div class="alinhar">
+            <li>
+              📌 Este quiz foi criado para
+              <strong>&nbsp;todas as idades e públicos</strong>.
+            </li>
+            <li>
+              📌 É educativo e tem como objetivo
+              <strong
+                >&nbsp;promover a conscientização sobre segurança
+                digital</strong
+              >.
+            </li>
+            <li>
+              📌 Responda com atenção e divirta-se aprendendo como
+              <strong>&nbsp;manter seus dados seguros na internet</strong>.
+            </li>
+            <li>
+              📌 Você vai aprender sobre
+              <strong
+                >&nbsp;proteção de senhas, privacidade online, golpes virtuais e
+                muito mais</strong
+              >.
+            </li>
+          </div>
+          <button id="fecharNota">Começar o Quiz</button>
+        </div>
+      </div>
+
       <div class="perguntas" id="quest">
         <p>
           Lorem ipsum dolor sit, amet consectetur adipisicing elit. Illo
@@ -71,7 +114,8 @@
       <!--Colocar uns boost por acerto ou habilidades do lado do nome.-->
     </footer>
   </body>
-
+  <script src="TelaDeCarregamento/loading.js"></script>
+  <script src="Nota/ConfigNota.js"></script>
   <script src="QuizConfig.js"></script>
   <script type="module" src="quest.js"></script>
   <script type="module" src="API/questapi.js"></script>
