@@ -165,11 +165,10 @@ li {
 }
 
 main {
-    display: grid;
     place-items: center;
     height: 100vh;
     background-color: #303030;
-
+    
 }
 
 
@@ -197,23 +196,27 @@ main {
 
 
 .respostas {
-    display: flex;
-    margin-bottom: 150px;
+    display: grid;
+    grid-template-columns: 2fr 2fr;
     overflow: hidden;
-    
+    margin-bottom: auto;
+    width: 90%;
 }
 
 .respostas > button {
     overflow: hidden;
     background-color: rgba(200, 200, 200, 0.753);
-    padding: 110px;
+    padding: 70px;
     margin: 10px;
+    font-size: 18px;
     color: black;
     border-radius: 15px;
     border-style: none;
     border-color:#30363D;
     box-shadow: 1px 2px 5px 1px;
     cursor: pointer;
+
+    
 }
 
 .respostas > button:hover {
