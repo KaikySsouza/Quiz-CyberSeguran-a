@@ -20,7 +20,7 @@ ul {
 }
 
 .menu {
-    background-color: #1f71eba6;
+    background-color: #313030;
 }
 
 
@@ -59,18 +59,75 @@ ul {
 
 .config-box {
     position: absolute ;
-    right: -7%;
-    top: 10%;
+    right: -10%;
+    top: 15%;
     transform: translate(-50%, -50%);
     width: 300px;
     padding: 20px;
-    background-color: white;
+    background-color: #303030;
     border: 2px solid rgba(0, 0, 0, 0.589);
     border-radius: 15px;
     box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.5);
     display: none; 
     z-index: 1000;
+
+    
 }
+.config-box > h1 {
+        color: #a244c7;
+        text-align: center;
+        font-size: 25px;
+    }
+
+    .config-box > button {
+        width: 100%;
+        padding: 10px;
+        margin-top: 10px;
+        background-color: #a244c7;
+        color: white;
+        border: none;
+        border-radius: 8px;
+        cursor: pointer;
+        font-size: 16px;
+    }
+
+
+    .config-box > button:hover {
+        background-color: #641a81c4;
+        transition: 0.3s;
+    }
+
+
+    .config-fonte {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        margin-top: 10px;
+        
+    }
+
+    .config-fonte > button {
+        background-color: #a244c7;
+        color: white;
+        border: none;
+        border-radius: 8px;
+        padding: 5px 10px;
+        cursor: pointer;
+        font-size: 24px;
+        overflow: hidden;
+    }    
+
+
+    .fonte {
+        width: 100%;
+        padding: 7px;
+        border: none;
+        border-radius: 8px;
+        background-color: #faf8f8;
+        font-size: 18px;
+        margin: 5px;
+    }
+
 
 .rotating-image {
     transition: transform 0.9s ease;
@@ -82,8 +139,7 @@ ul {
     transition: transform 0.5s ease, opacity 0.5s ease; 
     cursor: pointer; 
     margin: 15px;
-    ;
-   
+
 }
 
 :fullscreen .fullscreen {
@@ -94,7 +150,7 @@ ul {
 :fullscreen {
     width: 100%;
     height: 100%;
-    background-color: rgba(12, 34, 158, 0.603); 
+    background-color: #303030; 
     display: flex;
     flex-direction: column;
 }
@@ -112,7 +168,7 @@ main {
     display: grid;
     place-items: center;
     height: 100vh;
-    background-color: rgba(12, 34, 158, 0.603);
+    background-color: #303030;
 
 }
 
@@ -129,7 +185,7 @@ main {
 
 .perguntas{
   border: rgba(0, 0, 0, 0.589) 2px solid;
-  color: #C9D1D9;
+  color: #a244c7;
   border-radius: 15px;
   display: flex;
   text-align: justify;
@@ -149,9 +205,10 @@ main {
 
 .respostas > button {
     overflow: hidden;
-    background-color: #1F6FEB;
+    background-color: rgba(200, 200, 200, 0.753);
     padding: 110px;
     margin: 10px;
+    color: black;
     border-radius: 15px;
     border-style: none;
     border-color:#30363D;
@@ -160,8 +217,8 @@ main {
 }
 
 .respostas > button:hover {
-    background-color: 	#2E8BFF;
-    color: white;
+    background-color:rgba(200, 200, 200, 0.507);
+    color: #641a81c4;
     transition: 0.3s;
 }
 
@@ -173,7 +230,7 @@ footer {
     left: 0;
     right: 0;
     height: 50px;
-    background-color: rgba(12, 34, 158, 0.603);
+    background-color: #1d1d1d3d;
     color: white;
     font-size: 20px;
 }

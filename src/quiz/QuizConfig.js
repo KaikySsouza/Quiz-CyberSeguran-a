@@ -45,3 +45,19 @@ document
     }
   });
 
+
+// Sistema de Fonte Size
+
+  function AumentarFontSize() {
+    const body = document.body;
+    const currentSize = parseFloat(getComputedStyle(body).fontSize);
+    body.style.fontSize = (currentSize + 2) + "px";
+  }
+ 
+    function DiminuirFontSize() {
+    const body = document.body;
+    const currentSize = parseFloat(getComputedStyle(body).fontSize);
+    body.style.fontSize = (currentSize - 2) + "px";
+  }
+
+  
