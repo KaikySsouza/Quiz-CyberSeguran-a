@@ -26,11 +26,9 @@ export function checarResposta(indice, event) {
       resultado.push(valor);
       console.log("Pontuação parcial:", resultado);
     }
-
     event.target.style.backgroundColor = "green";
     currentIndex++;
   } else {
-    alert("Incorreta!");
     event.target.style.backgroundColor = "red";
     currentIndex++;
   }
