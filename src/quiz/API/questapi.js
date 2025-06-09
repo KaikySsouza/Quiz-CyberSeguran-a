@@ -8,4 +8,5 @@ async function getQuestions() {
     }
 }
 
+
 export default getQuestions;

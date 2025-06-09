@@ -28,9 +28,6 @@
   text-align: center;
 }
 
-.hidden {
-  display: none ;
-}
 
 .modal h2 {
   
@@ -71,7 +68,6 @@ button {
 button:hover {
   background-color: #45a049; 
 }
-
 
 
 

@@ -8,6 +8,7 @@
     <link rel="stylesheet" href="quiz.css" />
     <link rel="stylesheet" href="TelaDeCarregamento/loading.css">
     <link rel="stylesheet" href="Nota/nota.css" />
+    
 
   </head>
   <body>
@@ -50,7 +51,7 @@
         </ul>
       </div>
     </nav>
-    <main>
+   
 
 
       <div id="loader">
@@ -90,8 +91,37 @@
           <button id="fecharNota">Começar o Quiz</button>
         </div>
       </div>
-    <div class="main-container">
+      
+      <!--- <div class="dificuldade">
+        <h2>Escolha a Dificuldade</h2>
+        <div class="dificuldade-opcoes">
+          <button id="facil" onclick="ModoNormal()">Fácil</button>
+          <button id="medio">Médio</button>
+          <button id="dificil">Difícil</button>
+        </div>
+       </div> -->
+    <main class="main-container" id="quiz-container"> 
+    <div class="main">
+      <div class="titulo">
+        <h1>Quiz de Cibersegurança</h1>
+        <p>Teste seus conhecimentos sobre segurança digital!</p>
+      </div>
 
+      <div class="contador">
+        <p id="timer">00:00</p>
+        
+      </div>
+
+      <div class="quantidade">
+        <p id="questao">Questão: 1/13</p>
+        <p id="acertos">Acertos: 0</p>
+        <p id="erros">Erros: 0</p>  
+      </div>
+
+      <div>
+        <p id="dificuldade">Dificuldade: Fácil</p>
+        <!-- A dificuldade pode ser puxada do banco de dados, caso o usuario tenha feito o cadastro -->
+      </div>
       <div class="perguntas" id="quest">
         <p>
           Lorem ipsum dolor sit, amet consectetur adipisicing elit. Illo
@@ -109,8 +139,21 @@
         <button id="c"></button>
         <button id="d"></button>
       </div>
+      </div>
     </main>
-    </div> 
+    
+
+ <!-- Resultado (inicialmente escondido) -->
+      <div class="main-container" id="resultado-container" style="display:none;">
+        <div class="resultado-content">
+          <h2>Resultado do Quiz</h2>
+          <p id="resultado-texto"></p>
+          <p id="acertos-final">Acertos: 0</p>
+          <p id="erros-final">Erros: 0</p>
+          <button id="reiniciar-quiz" onclick="reiniciarQuiz()">Reiniciar Quiz</button>
+          <button id="sair-quiz" onclick="sairQuiz()">Sair do Quiz</button>
+        </div>
+
 
     <footer>
       <div class="Nome">
