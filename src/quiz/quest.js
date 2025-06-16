@@ -37,17 +37,26 @@ function mostrarPergunta() {
 
 let resultado = [];
 export function checarResposta(indice, event) {
-  const correta = perguntas[currentIndex].respostas[indice].correta;
+  const perguntaAtual = perguntas[currentIndex];
+  const correta = perguntaAtual.respostas[indice].correta;
+
   if (correta) {
     acertos++;
-    resultado.push(10); // Soma 10 pontos por acerto
+    resultado.push(10);
     event.target.style.backgroundColor = "green";
   } else {
     erros++;
     event.target.style.backgroundColor = "red";
   }
-  currentIndex++;
+
+  // ✅ Exibir a explicação antes de ir pra próxima
+  document.getElementById("explicacao").innerText = perguntaAtual.explicacao;
+  document.getElementById("explicacao").style.display = "block";
+
   setTimeout(() => {
+    document.getElementById("explicacao").style.display = "none";
+
+    currentIndex++;
     if (currentIndex < limiteQuestoes && currentIndex < perguntas.length) {
       mostrarPergunta();
       document.getElementById("a").style.backgroundColor = "";
@@ -64,10 +73,9 @@ export function checarResposta(indice, event) {
       resultado = [];
       carregarPerguntas();
     }
-  }, 1000);
+  }, 3000);  // ✅ Dei um tempo maior para dar tempo da pessoa ler a explicação (3 segundos)
 }
 
-// ...existing code...
 
 window.onload = function () {
   document.getElementById("a").onclick = (e) => checarResposta(0, e);
